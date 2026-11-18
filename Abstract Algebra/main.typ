@@ -4982,7 +4982,7 @@ Vậy ta có ví dụ cần tìm. Có thể chọn nhóm $G=ZZ_2$ và $G'={0}$.
   *Câu 1* 
   
   *Đóng* : Lấy $x,y in G$, có $x*y=x+y+(x y)/2=x(1+y/2)+2(1+y/2)-2=(x+2)(y+1/2)-2=1/4(x+2)(4y+2)-2$
-
+ Giả sử ta xét
 ]
 #pagebreak()
 #align(center)[
@@ -5243,4 +5243,7 @@ Vậy ta có ví dụ cần tìm. Có thể chọn nhóm $G=ZZ_2$ và $G'={0}$.
   d) *Phân loại:* Với từng đồng cấu tìm được ở câu c), hãy xác định hạt nhân và áp dụng định lý đẳng cấu thứ nhất để mô tả nhóm thương tương ứng.
 ]
 
+#loigiai[
 
+
+]
