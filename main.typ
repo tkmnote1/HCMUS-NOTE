@@ -4983,8 +4983,8 @@ Vậy ta có ví dụ cần tìm. Có thể chọn nhóm $G=ZZ_2$ và $G'={0}$.
   
   *Đóng* : Lấy $x,y in G$, có $x*y=x+y+(x y)/2=x(1+y/2)+2(1+y/2)-2=(x+2)(y+1/2)-2=1/4(x+2)(4y+2)-2$
 
-  #pagebreak()
 ]
+#pagebreak()
 #align(center)[
   #text(size: 16pt, weight: "bold", fill: blue)[ĐỀ THI GIỮA KỲ — ĐỀ SỐ 2]
 ]
