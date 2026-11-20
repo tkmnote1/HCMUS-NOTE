@@ -5062,14 +5062,43 @@ Vậy ta có ví dụ cần tìm. Có thể chọn nhóm $G=ZZ_2$ và $G'={0}$.
   $
   Mà, $x,y$ tùy ý $in G$ do đó ta có điều phải chứng minh.
 
-  
+  *Câu 4*
 
+  *a)* Lấy $x,y in ZZ times ZZ$, đặt $x=(x_1,x_2)$, $y=(y_1,y_2)$. Có, $x+y=(x_1+y_1,x_2+y_2)$, khi đó 
+  $
+  f(x+y)=f((x_1+y_1),(x_2+y_2))=overline(5(x_1+y_1)+3(x_2+y_2))=5 overline(x_1)+3 overline(x_2)+5(overline(y_1))+3 overline(y_2)=f(x)+f(y)
+  $
+
+  *b)*
+
+  Có $ K e r f={x in ZZ times ZZ : f(x)=overline(0)} = {x_1,x_2 in ZZ : overline(5 x_1+3 x_2)=overline(0)} =>15 | (5 x_1 + 3 x_2) $
+  Khi đó, ta thấy để $5 x_1 + 3 x _2$ là bội của $15$, do đó tìm được $n in ZZ$ sao cho $5 x_1 + 3 x_2=15 n$. Vậy, cần điều kiện $x_1,x_2 in ZZ$ để thỏa mãn điều trên.
+  
+  Đặt số dư của $5 x_1$ khi chia cho $15$ là $r$ và số dư của $3 x_2$ khi chia cho $15$ là $q$.
+
+% r+ q  15? // 7+8 =15 //
+
+  Nếu $5 x_1$ và $3 x_2$ cùng dư $0$ khi chia cho $15$, nghĩa là : $15 | 5 x_1 $ và $ 15 | 3 x_2$, suy ra 
+  $
+  x_1 = 3k ,x_2=5 m, forall k,m in ZZ
+  $
+
+  Khi đó, thực hiện phép chia Euclid, ta thu được
+  $
+5 x_1=h 15+r quad 3 x_2= k 15 + q
+  $
+  Thay vào, ta được$
+h 15+r + k 15+q=15 n => 15(k+q)+ r+ q=15 n=> 15 | k+q
+  $
+
+
+  
 
 ]
 
 #pagebreak()
 
-
+g
 #align(center)[
   #text(size: 16pt, weight: "bold", fill: blue)[ĐỀ THI GIỮA KỲ — ĐỀ SỐ 3]
 ]
@@ -5277,3 +5306,232 @@ f(overline(x y) )=f(overline(x)) f(overline(y))
 
 
 ]
+
+
+#pagebreak()
+
+=== Đề 05
+
+
+#cau[
+  *Câu 1 (3.0 điểm).* Cho $G = RR ∖ brace.l -1/3 brace.r$. Với mọi $x, y in G$, đặt
+  $
+    x * y = x + y + 3 x y.
+  $
+
+  a. Chứng minh rằng $(G, *)$ là một nhóm giao hoán.
+
+  b. Tìm tất cả phần tử có cấp hữu hạn của nhóm $(G, *)$.
+]
+
+#cau[
+  *Câu 2 (2.0 điểm).* Trong nhóm $S_6$, cho các hoán vị
+  $
+    sigma = (1 2 4 6)(2 3 5 6),
+  $
+  và
+  $
+    tau = mat(
+      1, 2, 3, 4, 5, 6;
+      3, 5, 1, 6, 4, 2
+    ).
+  $
+
+  a. Tìm $alpha in S_6$ sao cho $sigma alpha = tau$.
+
+  b. Phân tích $alpha$ tìm được ở ý a thành tích các chu trình rời nhau và tìm cấp của $alpha$.
+]
+
+#cau[
+  *Câu 3 (3.0 điểm).* Cho $(G, dot)$ là một nhóm có cấp 13. Chứng minh rằng
+
+  a. $G$ là nhóm cyclic.
+
+  b. Ánh xạ
+  $
+    phi: G -> G, quad x ↦ x^8
+  $
+  là một tự đẳng cấu của nhóm $G$.
+]
+
+#cau[
+  *Câu 4 (2.0 điểm).* Cho $H, K$ là hai nhóm con chuẩn tắc của $(G, dot)$ thỏa mãn $H inter K = brace.l e brace.r$.
+
+  Chứng minh rằng $x y = y x$, với mọi $x in H$, $y in K$.
+]
+
+#cau[
+  *Câu 5 (Thưởng +1.0 điểm).* Cho một ví dụ về một nhóm $G$ có cấp vô hạn nhưng tất cả phần tử của $G$ đều có cấp hữu hạn.
+]
+#loigiai[
+
+  *Câu 1*
+
+  *a)* Đóng : Lấy $x,y in G$, có 
+  $
+x*y=x+y+3 x y=x(1+3 y)+1/3(1+3y) -1/3=(x+1/3)(1+3 y)-1/3=3(x+1/3)(y+1/3)-1/3=> 1/9+1/3x*y=(x+1/3)(y+1/3)
+  $
+  Do đó, nếu $x*y=-1/3$, thì dẫn đến $x=-1/3 or y=-1/3$, vô lý. Vậy , $x*y in G$.
+
+  Kết hợp : Lấy $x,y,z in G$, có 
+  $
+(x*y)*z=(x*y)+z+3 (x*y)z= x+y+3 x y+z +(x +y +3 x y) z= x*(y*z)
+  $
+
+  Giao hoán : Lấy $x,y in G$, có $x*y=x+y+3 x y= y + x + 3 y x= y*x$, do đó $G$ giao hoán.
+
+  Đơn vị : Tìm $e in G$, thỏa $forall x in G$, $x * e= e*x =x$, giả sử có $e in G$ thỏa điều trên, ta có 
+  $
+x*e=x+e+3 x e= x <=> e (1+3 x)=0 => e=0 "vì "x!=-1/3
+  $
+
+  Khả nghịch : Lấy bất kỳ $x in G$, tìm $y in G$ sao cho $x *y=e$
+
+  Có $
+x*y=x+y+3 x y =0 <=> y(1+3 x) =- x => y= -x/(1+3 x) in G 
+  $
+
+  *b)* Ta có nhận xét :
+  $
+1/9+1/3 x^*(m)=(x+1/3)^m
+  $
+  Do đó, nếu $x^(*m)=0 => (x+1/3)^m=1$, do đó nếu $m$ chẵn thì $x+1/3=+-1 =>x=-2/3 "hoặc" x=2/3$.
+
+  *Câu 3*
+
+  *a)* Xét $(G,.)$ là nhóm có cấp $13$, ta chứng minh $G$ là nhóm cyclic. Vì $G$ là nhóm có cấp $13$, do đó ta lấy $a in G : a !=e$.
+
+  Theo định lý Largange, đặt $m=o r d(a) => m | 13$, mặt khác $a !=e => m !=1$, mà $13$ là số nguyên tố , nên $m | 13 " và " m!=1 => m=13$. Do đó, cấp $a=13 => G=chevron.l a chevron.r$
+
+  *b)* 
+
+  *Đồng Cấu* Lấy $x,y in G$, có 
+  $
+  f(x y)=(x y)^8=x^8 y^8=f(x) f(y) "Do G là nhóm cyclic, nên G đặc biệt abel".
+
+  $
+  Do đó, $f$ là đồng cấu nhóm.
+
+  Đơn ánh : Lấy tùy ý $x,y in G$, giả sử $f(x)=f(y) <=> x^8=y^8 => x= y?$, $x=a^m,y=a^n$. Có 
+  $
+x^8=(a^m)^8=(a^n)^8=y^8 <=> (a^8)^m=(a^8)^n => m=n => x=y 
+
+  $
+
+  Chứng minh : $K e r f ={e}$. Lấy $x in K e r f =>? x in {e}$. Có $x in K e r f <=> f(x)=e <=> x^8 = e$, mặt khác vì $x in G$,
+  nên có $m in ZZ$ sao cho $x=a^m => a^(m)^8=e=a^0=> 8 m =0 => m=0 => x= e => x in {e}$.
+
+
+  *Câu 4* 
+
+  Cần chứng minh  : $x y= y x,forall x in H ,forall y in K $.
+
+  Mục tiêu của mình là : $x y = y x =>a=y^(-1) x y x^(-1)=e => y^(-1) x y  x^(-1) in H inter K $.
+
+  H là nhóm con chuẩn tắc, K là nhóm con chuẩn tắc.
+
+  *Câu 3*
+
+  Cho $(G,+)$ là một nhóm cộng cấp $20$. Với mỗi $a | 20$. Định nghĩa 
+  $
+G_a :={g in G : |g| | a}
+  $
+
+  *a)* CMR : $G_4$ và $G_5$ là $2$ nhóm con của $(G,+)$, và $G_4 inter G_5={0}$.
+  
+  *b)* CMR : $G=G_4+G_5$.
+
+  *a)* Quy ước nhóm cộng là nhóm abel. 
+
+  Lấy tùy ý $0 in G : |0|=1 | 4 => 0 in G_4$. Vậy $G_4 != emptyset$. 
+
+  Lấy tùy ý $x,y in G_4$, chứng minh $x+y in G_4$, hay $ o r d (x+y) | 4$
+
+  Từ $x,y in G_4 => o r d (x) | 4  quad"và"   o r d (y) | 4$, Có $(x+y)^4=x+y+x+y+x+y+x+y=4 x + 4 y=0 => o r d (x+y ) | 4 => (x+y) in G_4$.
+
+  Lấy $x in G_4$, chứng minh $x^(-1) in G_4$. Luôn có $|x|=|x^(-1)| => |x^(-1)| | 4 "do "|x| | 4$. Vậy $G_4$ là nhóm con của $G$, chứng minh tương tự với $G_5$.  Chứng minh $G_4 inter G_5={0}$.
+
+  Lấy $
+  x in G_4 inter G_5 => cases(o r d(x) | 4 , o r d (x) | 5 )
+  => cases(4 x =0,5 x =0) => x=0 => x in {0} => G_4 inter G_5 subset.eq {0}. $
+
+  *3b)*
+
+  Chứng minh $G=G_4+G_5$. 
+
+
+  Nhận xét : 
+
+  $G_4 + G_5 subset.eq G$. Vì $G_4$ và $G_5$ là nhóm con của $G$, mặt khác $G$ là nhóm, nên sẽ đóng với phép cộng, vậy $G_4 + G_5 subset.eq G$.
+
+  $G subset.eq G_4 +G_5$. Trong đó, $G_4+G_5 ={g_1 + g_2 : g_1 in G_4, g_2 in G_5}$.
+
+  Lấy $g in G => |g| | 20$. Mặt khác, nếu $|g| | 5 => g in G_5 ; |g| | 4 => g in G_4$.
+
+  $g=5 g+(-4)g$. Trong đó, $5 g in G_4$. Đặt $x= 5g => 4 x = 20 g=0=> x in G_4$, tương tự $y=-4 g=> y in G_5$.
+
+  Vậy với tùy ý $g in G$, ta đều có $g=x+y$, trong đó $x in G_4$ và $y in G_5$. Vậy $G subset.eq G_4+G_5$.
+  
+
+
+
+
+]
+#cau[
+  Cho $G, G'$ là các nhóm, $f: G -> G'$ là một toàn cấu nhóm và $H$ là nhóm con chuẩn tắc của $G$. Đặt
+
+  $ f(H) = {f(h) | h in H}. $
+
+  Chứng minh rằng $f(H)$ là nhóm con chuẩn tắc của $G'$.
+]
+#loigiai[
+
+  Xuất phát từ điều cần chứng minh.
+
+  $f(H)={f(h): h in H}$. // 
+
+  $I m f={f(x) : x in G}$.
+
+  Ảnh thật sự $f$ với tập nguồn là $G$. $f$ toàn ánh thì $I m f=G'$.
+
+  Ảnh thật sự của tập nguồn là H.
+
+  *f(H)* là nhóm con.
+
+  Xét $e in H$, có $f(e)=e' in f(H) => f(H) "khác rỗng"$.
+
+  Cho trước $x,y in f(H) $, chứng minh $x y in f(H)$.
+
+  Cần chứng minh $x y in f(H)$, có nghĩa là tìm $h' in H : f(h')= x y$.
+
+  $x in f(H)$, có nghĩa là có $h_1 in H : f(h_1)=x$. Tương tự, có $h_2 in H : f(h_2)=y$.
+
+  Có $x y = f(h_1) f(h_2)= f(h_1 h_2)$ mà tại sao $h_1 h_2 in H$, vì $H$ là nhóm con chuẩn tắc của $G$, nên $h_1 h_2 in H$ do đó chọn $h'=h_1 h_2 in H$, thì $x y in f(H)$.
+
+
+  Cho trước $x in f(H)$, cần chứng minh $x^(-1) in f (H)$. Hay tìm $h' in H : f(h')=x^(-1)$.
+
+  Vì $x in f(H) => h_1 in H : f(h_1)=x => f(h_1)^(-1)=x^(-1) => f(h_1^(-1))=x^(-1)$, vì $h_1 in H =>h_1^(-1) in H$, do đó chọn $h'=h_1^(-1)$ thì $x^(-1) in f(H)$.
+
+  Vậy, $f(H) <= G'$.
+
+  Chứng minh $f(H)$ là nhóm con chuẩn tắc của $G'$.
+
+  Cho trước $g in G'$ và $x in f(H)$, ta chứng minh $g x g^(-1) in f(H)$.
+  Tức là tìm $h' in H : f(h')=g x g^(-1)$.
+
+
+Vì $x in f(H) => "có" h_1 in H : f(h_1)=x$, nếu $g in G'$, có tìm được $k in G:f(k)=g$? 
+
+Vì $f$ là toàn cấu nhóm, nên với mỗi $g in G'$, ta đều tìm được $k in G : f(k)=g$, khi đó với $g^(-1)$, ta tìm được $k^(-1) in G : f(k^(-1))=g^(-1)$.
+
+Khi đó, $g x g^(-1)= f(k) f(h_1) f(k^(-1))=f(k h_1 k^(-1))$, làm sao chỉ ra $k h_1 k^(-1) in H$.
+
+Vì $H$ là nhóm con chuẩn tắc của $G$, nên $k h_1 k^(-1) in H$, do đó chọn $h'=k h_1 k^(-1) in H$.
+  
+
+]
+
+
+
+
