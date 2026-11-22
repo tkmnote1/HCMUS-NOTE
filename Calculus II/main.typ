@@ -3607,7 +3607,7 @@ Từ nay về sau, ta sẽ ký hiệu $(x_(k_n))$ thay cho $x ∘ k$ như một 
 #pagebreak()
 
 = Đề Thi Giữa Kỳ
-== 2025-2026
+== 2025-2026 -- Nguyễn Đăng Khoa
 
 #cau[ Cho $E = RR^2$. Với $a,b > 0$ cho trước, ta xét ánh xạ:
 
@@ -3792,5 +3792,182 @@ Từ nay về sau, ta sẽ ký hiệu $(x_(k_n))$ thay cho $x ∘ k$ như một 
 
 
 
+
+
+]
+#pagebreak()
+== 2025-2026 -- Lê Ánh Hạ
+
+#cau[
+  Cho $X = C([0,1])$ là tập hợp những hàm số liên tục trên $[0,1]$. Xét hàm số
+  $
+    d: X times X -> RR
+  $
+  $
+    (x,y) mapsto d(x,y) = integral_0^1 (2t+1) abs(x(t)-y(t)) "d"t
+  $
+
+  Chứng minh rằng $d$ là một metric trên $X$.
+]
+
+#cau[
+  Trên $RR^2$, cho hàm số
+  $
+    d: RR^2 times RR^2 -> RR
+  $
+  $
+    (x,y) mapsto d(x,y) = sqrt(2(y_1-x_1)^2 + 3(y_2-x_2)^2)
+  $
+  với $x=(x_1,x_2)$, $y=(y_1,y_2) in RR^2$.
+
+  a) Chứng minh rằng $d$ là một metric đầy đủ trên $RR^2$.
+
+  b) Cho $D = {(x_1,x_2) in RR^2 : x_1^2+x_2^2 < 3}$, chứng minh $D$ là tập mở trong $(RR^2,d)$. Tìm bao đóng của $D$.
+
+  c) Tập $A = {(x_1,x_2) in RR^2 : x_1 >= 0, x_1^2+x_2^4 <= 3}$ có là tập compact trên metric $(RR^2,d)$ hay không? Vì sao?
+
+  d) Tập $B = {(x_1,x_2) in RR^2 : x_1 >= 0, x_1^2+x_2^3 <= 3}$ có là tập compact trên metric $(RR^2,d)$ hay không? Vì sao?
+]
+#loigiai[
+
+  *Câu 1*
+
+  Ta chứng minh $d$ là một metric trên $X$.
+
+  *i)* Với $x,y in X$ có $ d(x,y)=integral_0^1(2 t+1) abs(x(t)-y(t)) dif t=integral_0^1 (2 t+1 ) abs(y(t)-x(t)) dif t $.
+
+  *ii)* Với $x,y in X$, giả sử $d(x,y)=0$, khi đó
+  $
+    integral_0^1 (2t+1) abs(x(t)-y(t)) dif t & =0 \
+                                             & <=> x(t)=y(t) , forall t in [0,1] \
+                                             & <=> x=y.
+  $
+
+  *iii)* Lấy $x,y,z in X$, ta chứng minh
+
+  $
+    d(x,y)<=d(x,z)+d(z,y)
+  $
+  Mặt khác, vì $(R,d_(t t))$ là không gian metric đầy đủ, nên với mỗi $t in [0,1]$, ta luôn có
+  $
+    abs(x(t)-y(t))<=abs(x(t)-z(t))+abs(z(t)-y(t)) quad (1)
+  $
+  Với mỗi $t in [0,1]$ thì $(2 t+1 )>0$, do đó nhân $2$ vế của $(1)$ cho $(2 t+1)$ , ta được
+  $
+    (2 t+1) abs(x(t)-y(t)) <= (2 t+1)abs(x(t)-z(t))+ (2 t+1) abs(z(t)-y(t))
+  $
+  Do đó, lấy tích phân từ $0 -> 1$, ta được
+  $
+    integral_0^1 (2 t+1) abs(x(t)-y(t)) dif t &<=integral_0^1 (2 t+1) abs(x(t)-z(t)) dif t + integral_0^1 (2 t+1)abs(z(t)-y(t))dif t \
+    &=d(x,z) + d(z,y)
+  $
+  Vậy, $d$ là một metric.
+
+  *Câu 2*
+
+  Ta có nhận xét sau, với không gian $X$ và có metric $d_A$ và $d_B$, hơn nữa $d_A$ và $d_B$ tương đương, nghĩa là có $m,m>0$ sao cho
+  $
+    m d_A(x,y) <= d_B(x,y)<=M d_A (x,y)
+    forall x,y in X
+  $
+  Khi đó, nếu $(X,d_A)$ đầy đủ thì $(X,d_B)$ cũng đầy đủ.
+
+  Chứng minh, nhận xét trên. Lấy một dãy Cauchy bất kỳ $(x_n)$ trong $(X,d_B)$, do ,
+  $
+    d_A(x_m,x_n)<=1/m d_B(x_m,x_n).
+  $
+  Nên $(x_n)$ cũng là dãy Cauchy trong $(X,d_A)$. Vì $(X,d_A)$ đầy đủ nên $(x_n)$ hội tụ, dẫn đên có $x in X$ sao cho $ lim_(n->infinity) d_A(x_n,x)=0 $
+  Mặt khác,
+  $
+    0<=d_B(x_n,x)<=M d_A(x_n,x) -> 0
+  $
+  Vậy, $x_n -> x$ theo metric $d_B$. Do đó, $(X,d_B)$ đầy đủ.
+
+
+  Khi đó, với $X=RR^2$, và $ d(x,y)=sqrt(2(x_1-y_1)^2+3(x_2-y_2)^2) $
+  Xét $d_2 (x,y)$ là metric Euclid thông thường trên $RR^2$, khi đó ta chứng minh $d$ và $d_2$ tương đương.
+
+  Giả sử có $M>0$ sao cho
+  $
+    d (x,y)<=M d_2(x,y) <=> 2(x_1-y_1)^2 +3(x_2-y_2)^2 <= M^2[(x_1-y_1)^2+(x_2-y_2)^2] => "chọn "M^2=100=>M=10
+  $
+  Tương tự, giả sử có $m>0$ sao cho
+  $
+    m d_2(x,y) <= d(x,y) <=> m^2[(x_1-y_1)^2+(x_2-y_2)^2]<=2 (x_1-y_1)^2 + 3(x_2-y_2)^2 => "chọn "m=1/sqrt(5)
+  $
+  Do đó, ta có $d$ và $d_2$ tương đương, mặt khác $(RR^2,d_2)$ đầy đủ, nên suy ra $(RR^2,d)$ đầy đủ.
+
+  *b)*
+
+  Ta chứng minh $D$ là tập mở trong $(RR^2,d)$ bằng $2$ cách.
+
+  *Cách 1* Lấy $x=(x_1,x_2) in D$, tìm $r_x>0$ sao cho $B(x,r) subset D$.
+
+  Cho trước $y=(y_1,y_2) in B(x,r)$, ta chứng minh $y_1^2+y_2^2 <3$.
+
+  Với $x in D$, ta luôn có $x_1^2+x_2^2 <3$
+
+  Xuất phát từ điều cần chứng minh với $y_1^2+y_2^2<3$.
+
+  Ta cố gắng đưa $x_1,x_2$ vào điều cần chứng minh. Khi đó, $y_1=$
+
+
+
+
+]
+#pagebreak()
+== 2025-2026 -- Trần Thị Khiếu
+#cau[
+  (2 điểm) Trong $RR^2$, cho:
+  $
+    d(x,y) = abs(x_1-y_1) + abs(x_2-y_2)
+  $
+  với $x=(x_1,x_2)$, $y=(y_1,y_2) in RR^2$.
+
+  a) Chứng minh rằng $(RR^2,d)$ là không gian metric đầy đủ.
+
+  b) Cho $D = {(x,y) in RR^2 : x^2+y^2 <= 2x}$. Chứng minh $D$ là tập compact trong $(RR^2,d)$.
+]
+
+#cau[
+  (1.5 điểm) Cho $E=C([0,1])$ là không gian các hàm số liên tục trên $[0,1]$. Xét một metric sau:
+  $
+    d(f,g) = integral_0^1 abs(f(t)-g(t)) dif t
+  $
+
+  Hỏi dãy $f_n(t)=t^n$ ($n in NN$) có là một dãy Cauchy trong $(E,d)$ hay không? Nếu ${f_n}$ hội tụ trong $(E,d)$ thì có đủ khẳng định rằng $(E,d)$ là không gian metric đầy đủ hay không?
+]
+
+#cau[
+  (2 điểm) Cho $E=C([0,1])$ với mọi $x,y in E$ ta định nghĩa:
+  $
+    delta(x, y) = sup_(0 <= t <= 1) abs(x(t)-y(t))
+  $
+
+  Đặt, với mỗi $n in NN$,
+  $
+    A(x) = 1/n integral_(1/(n+1))^(1/n) x^2(t) dif t.
+  $
+
+  Chứng minh rằng $A$ là ánh xạ liên tục đều từ $E$ vào $RR$.
+]
+
+#cau[
+  (3 điểm) Cho dãy hàm ${f_n}$ thỏa:
+  $
+    f_n(x) = n x e^(-n x), quad x >= 0
+  $
+
+  a) Chứng minh rằng ${f_n}$ hội tụ đều trên $[1,+oo)$.
+
+  b) Chứng minh rằng ${f_n}$ không hội tụ đều trên $[0,1]$.
+]
+
+#cau[
+  (1.5 điểm) Chứng minh:
+
+  a) Xét hai không gian metric $(E,delta_E)$ và $(F,delta_F)$. Cho ánh xạ $f:E -> F$ liên tục trên $E$. Chứng minh rằng $U$ mở trong $F$ thì $f^(-1)(U)$ mở trong $E$.
+
+  b) Cho $f$ là ánh xạ liên tục giữa hai không gian metric $X=(RR,d_1)$, $Y=(RR,d_2)$ với $d_1(x,y)=d_2(x,y)=abs(x-y)$, $forall x,y in RR$. Chứng minh rằng nếu $A$ là tập đóng và bị chặn trong $X$ thì $f(A)$ đóng và bị chặn trong $Y$.
 ]
 
