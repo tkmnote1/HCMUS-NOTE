@@ -1,2 +1,0 @@
-
-khuong dep trai 
